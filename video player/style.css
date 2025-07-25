@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('https://images.unsplash.com/photo-1602524201206-3a5c8b47f2ad') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.video-wrapper {
+  width: 100%;
+  max-width: 850px;
+  padding: 20px;
+  backdrop-filter: blur(12px) brightness(0.9);
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+}
+
+.tv-selector {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.tv-selector select {
+  margin-left: 10px;
+  padding: 4px;
+  border-radius: 5px;
+}
+
+.video-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: #000;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+}
+
+button, select, input[type=range] {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+input[type=range] {
+  width: 100px;
+}
+
+.quality-label {
+  background: crimson;
+  padding: 2px 8px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #fff;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ultra Video Player</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="video-wrapper">
+    <div class="tv-selector">
+      <label for="inputSelect">Input:</label>
+      <select id="inputSelect">
+        <option>HDMI 1</option>
+        <option>HDMI 2</option>
+        <option>USB</option>
+        <option>AV</option>
+      </select>
+    </div>
+
+    <div class="video-container">
+      <video id="video" controlsList="nodownload">
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        <track src="https://gist.githubusercontent.com/gistofjay/f5e7dfb84f9d0a731eef8abdee40fffd/raw/subs.vtt" kind="subtitles" srclang="en" label="English" default>
+      </video>
+      
+      <div class="controls">
+        <span class="quality-label">HD</span>
+        <button id="play-pause">▶️</button>
+        <button id="rewind">⏪ 10s</button>
+        <button id="forward">10s ⏩</button>
+        <input type="range" id="volume" min="0" max="1" step="0.1">
+        <button id="mute">🔊</button>
+        <select id="speed">
+          <option value="0.5">0.5×</option>
+          <option value="1" selected>1×</option>
+          <option value="1.5">1.5×</option>
+          <option value="2">2×</option>
+        </select>
+        <button id="subs">📝 Subtitles</button>
+        <button id="pip">📺</button>
+        <button id="fullscreen">⛶</button>
+      </div>
+
+      <div class="playlist">
+        <h4>Next up</h4>
+        <ul>
+          <li data-src="https://www.w3schools.com/html/movie.mp4">Sample Video 2</li>
+          <li data-src="https://www.w3schools.com/html/mov_bbb.mp4">Big Buck Bunny</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
